@@ -336,9 +336,12 @@ class PG090300(PGMaterializedViewManager):
                    dict(mat_view_name=mat_view_name,
                         view_name=view_name,
                         ))
+        cr.execute("CREATE UNIQUE INDEX %(mat_view_name)s_index "
+                   "ON %(mat_view_name)s (id)" %
+                   dict(mat_view_name=mat_view_name, ))
 
     def refresh_mat_view(self, cr, view_name, mat_view_name):
-        cr.execute("REFRESH MATERIALIZED VIEW %(mat_view_name)s" %
+        cr.execute("REFRESH MATERIALIZED VIEW CONCURRENTLY %(mat_view_name)s" %
                    dict(mat_view_name=mat_view_name,
                         ))
 

@@ -25,6 +25,10 @@
                                 string="Refresh now"
                                 type="object" states="nonexistent,refreshed,aborted"
                                 groups="materialized_sql_view.manager_group"/>
+	                    <button name="refresh_materialized_view"
+	                            string="Force Refresh"
+	                            type="object" states="refreshing"
+	                            groups="materialized_sql_view.manager_group"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="nonexistent,creating,refreshing,refreshed,aborted"
                                statusbar_color="{'aborted': 'red'}"
