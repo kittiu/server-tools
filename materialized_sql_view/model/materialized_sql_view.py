@@ -102,7 +102,7 @@ class MaterializedSqlView(models.Model):
 
     @api.model
     def before_create_view(self, matview):
-        return self.write_values(matview.get('view_name'),
+        return self.write_values(matview.get('matview_name'),
                                  {'last_refresh_start_date': datetime.now(),
                                   'state': 'creating',
                                   'last_error_message': '',
@@ -110,7 +110,7 @@ class MaterializedSqlView(models.Model):
 
     @api.model
     def before_refresh_view(self, matview):
-        return self.write_values(matview.get('view_name'),
+        return self.write_values(matview.get('matview_name'),
                                  {'last_refresh_start_date': datetime.now(),
                                   'state': 'refreshing',
                                   'last_error_message': '',
@@ -129,13 +129,13 @@ class MaterializedSqlView(models.Model):
         if matview.get('view_name'):
             values.update({'view_name': matview.get('view_name')})
         values.update({'pg_version': pg_version})
-        return self.write_values(matview.get('view_name'), values)
+        return self.write_values(matview.get('matview_name'), values)
 
     @api.model
     def after_drop_view(self, matview):
         # Do not unlink here, we don't want to use on other record when refresh
         # need to drop and create a new materialized view
-        return self.write_values(matview.get('view_name'),
+        return self.write_values(matview.get('matview_name'),
                                  {'state': 'nonexistent',
                                   'last_error_message': '',
                                   })
