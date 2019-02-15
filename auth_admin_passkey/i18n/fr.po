@@ -1,43 +1,33 @@
-##############################################################################
-#
-#    Admin Passkey module for OpenERP
-#    Copyright (C) 2013-2014 GRAP (http://www.grap.coop)
-#    @author Sylvain LE GAL (https://twitter.com/legalsylvain)
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* auth_admin_passkey
+# * auth_admin_passkey
 #
+# Translators:
+# Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2015
+# Ahmet Altinisik <aaltinisik@altinkaya.com.tr>, 2015
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012
+# Hotellook, 2014
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
+# Paolo Valier, 2016
+# Rudolf Schnapka <rs@techno-flex.de>, 2016
+# Thomas A. Jaeger, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: server-tools (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-23 20:41+0000\n"
-"PO-Revision-Date: 2014-04-08 09:24+0000\n"
-"Last-Translator: Sylvain LE GAL (GRAP) <Unknown>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2017-03-02 09:58+0000\n"
+"PO-Revision-Date: 2017-01-12 18:08+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: French (http://www.transifex.com/oca/OCA-server-tools-8-0/"
+"language/fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-24 06:46+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: auth_admin_passkey
-#: code:addons/auth_admin_passkey/model/res_users.py:66
+#: code:addons/auth_admin_passkey/models/res_users.py:66
 #, python-format
 msgid "<pre>User with login '%s' has the same password as you.</pre>"
 msgstr ""
@@ -45,7 +35,7 @@ msgstr ""
 "vous.</pre>"
 
 #. module: auth_admin_passkey
-#: code:addons/auth_admin_passkey/model/res_users.py:44
+#: code:addons/auth_admin_passkey/models/res_users.py:41
 #, python-format
 msgid ""
 "Admin user used his passkey to login with '%s'.\n"
@@ -68,12 +58,12 @@ msgstr ""
 "\n"
 
 #. module: auth_admin_passkey
-#: view:base.config.settings:0
+#: view:base.config.settings:auth_admin_passkey.view_res_config_settings
 msgid "Passkey"
 msgstr "Mot de passe \"bris de glace\""
 
 #. module: auth_admin_passkey
-#: code:addons/auth_admin_passkey/model/res_users.py:42
+#: code:addons/auth_admin_passkey/models/res_users.py:38
 #, python-format
 msgid "Passkey used"
 msgstr "Mot de passe \"bris de glace\" utilisé"
@@ -89,9 +79,7 @@ msgid "Send email to user."
 msgstr "Envoyer un email à l'utilisateur."
 
 #. module: auth_admin_passkey
-#: code:_description:0
 #: model:ir.model,name:auth_admin_passkey.model_res_users
-#, python-format
 msgid "Users"
 msgstr "Utilisateurs"
 
@@ -99,22 +87,22 @@ msgstr "Utilisateurs"
 #: help:base.config.settings,auth_admin_passkey_send_to_user:0
 msgid ""
 "When the administrator use his password to login in with a different "
-"account, OpenERP will send an email to the account user."
+"account, Odoo will send an email to the account user."
 msgstr ""
 "Quand l'administrateur utilise son mot de passe pour s'authentifier avec un "
-"compte différent, OpenERP lui enverra un mail."
+"compte différent, Odoo lui enverra un mail."
 
 #. module: auth_admin_passkey
 #: help:base.config.settings,auth_admin_passkey_send_to_admin:0
 msgid ""
 "When the administrator use his password to login in with a different "
-"account, OpenERP will send an email to the admin user."
+"account, Odoo will send an email to the admin user."
 msgstr ""
 "Quand l'administrateur utilise son mot de passe pour s'authentifier avec un "
-"compte différent, OpenERP enverra un mail à l'utilisateur."
+"compte différent, Odoo enverra un mail à l'utilisateur."
 
 #. module: auth_admin_passkey
-#: code:addons/auth_admin_passkey/model/res_users.py:64
+#: code:addons/auth_admin_passkey/models/res_users.py:64
 #, python-format
-msgid "[WARNING] OpenERP Security Risk"
-msgstr "[WARNING] Faille de sécurité sur OpenERP"
+msgid "[WARNING] Odoo Security Risk"
+msgstr "[WARNING] Faille de sécurité sur Odoo"

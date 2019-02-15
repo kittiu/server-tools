@@ -21,11 +21,12 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
+import logging
+import sys
+import traceback
 from openerp import SUPERUSER_ID
 from openerp.osv import orm, fields
 from openerp.tools.translate import _
-import logging
 
 
 _logger = logging.getLogger(__name__)
@@ -57,13 +58,16 @@ class ir_cron(orm.Model):
             context = {
                 'job_exception': job_exception,
                 'dbname': cr.dbname,
+                'traceback': '\n'.join(
+                    traceback.format_exception(*sys.exc_info())
+                ),
             }
 
             _logger.debug("Sending scheduler error email with context=%s",
                           context)
 
             self.pool['email.template'].send_mail(
-                cr, SUPERUSER_ID, my_cron.email_template.id, my_cron.id,
+                cr, SUPERUSER_ID, my_cron.email_template_id.id, my_cron.id,
                 force_send=True, context=context)
 
         return res

@@ -20,8 +20,9 @@
 ##############################################################################
 {
     "name": "Dynamic groups",
-    "version": "1.0",
-    "author": "Therp BV",
+    "version": "8.0.1.0.0",
+    "author": "Odoo Community Association (OCA),Therp BV",
+    "license": "AGPL-3",
     "complexity": "normal",
     'summary': 'Have membership conditions for certain groups',
     "category": "Tools",

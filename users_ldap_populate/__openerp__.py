@@ -20,27 +20,17 @@
 ##############################################################################
 {
     "name": "LDAP Populate",
-    "version": "1.2",
+    "summary": "Create users from LDAP before they log in",
+    "version": "8.0.1.2.1",
     "author": "Therp BV,Odoo Community Association (OCA)",
     "license": "AGPL-3",
-    "category": 'Tools',
-    "description": """
-This module allows to prepopulate the user database with all entries in the
-LDAP database.
-
-In order to schedule the population of the user database on a regular basis,
-create a new scheduled action with the following properties:
-
-- Object: res.company.ldap
-- Function: action_populate
-- Arguments: [res.company.ldap.id]
-
-Substitute res.company.ldap.id with the actual id of the res.company.ldap
-object you want to query.
-""",
+    "category": 'Authentication',
     "depends": [
         'auth_ldap',
     ],
+    'external_dependencies': {
+        'python': ['ldap'],
+    },
     "data": [
         'view/users_ldap.xml',
         'view/populate_wizard.xml',
